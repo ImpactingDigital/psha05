@@ -17,10 +17,106 @@ Campanha Shamir® - ADRENALINA
 -------------------------- */
 
 
-html{
-    font-family: font-family: 'Titillium Web', sans-serif;
+p{
+    font-family: 'Titillium Web', sans-serif;
 }
 
-header{
-    height: 1000px;
+.body-back{
+    position:relative;
 }
+.header{
+    Position:relative;
+    height: 500px;
+    background: url(images/green_head.png) top no-repeat ;
+    background-size: 100% 60%;
+}
+.halftone-header{
+    position: absolute;
+    height: 700px;
+    width: 700px;
+    background: url(images/half.png) center no-repeat ;
+    background-size: cover;
+    top:-200px;
+    right:-550px;
+    transform: rotate(70deg);
+}
+.header_title {
+    font-family: 'Titillium Web', sans-serif;
+    position: relative;
+    font-size: 60px;
+    font-weight: 600;
+    padding: 70px 0px 0px 0px;
+    transform: rotate(-3deg);   
+}
+.second-title {
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    font-size: 137px;
+    padding: 0px 20px 0px 20px;
+    margin: auto 0;
+    color: white;
+    background-color: #FB5058;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (max-width : 1200px) {
+.second-title {
+    font-size: 112px;
+}}
+@media only screen and (max-width : 992px) {
+.second-title {
+    font-size: 102px;
+}}
+
+@media only screen and (max-width : 768px) {
+.second-title {
+    font-size: 62px;    
+}
+.halftone-header{
+    top:-400px;
+    right:-550px;
+}
+.header_title {
+    font-size: 30px;
+}
+.header{
+    background-size: 100% 40%;    
+}
+}
+
+@media only screen and (max-width : 480px) {
+.second-title {
+    font-size: 37px;        
+}
+.header_title {
+    font-size: 20px;
+}
+.header{
+    background-size: 100% 41%;    
+}
+}
+
+@media only screen and (max-width : 320px) {
+.second-title {
+    font-size: 35px;     
+}}
+
+
