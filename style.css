@@ -14,21 +14,41 @@
 www.impacting.digital
 Custom css - 03.19.18
 Campanha Shamir® - ADRENALINA
--------------------------- */
 
+-------------------------- */
 
 p{
     font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
 }
-
+h2{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+}
+h3{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+}
 .body-back{
     position:relative;
+    height: 5500px;
+}
+.body-back:before{
+    position:absolute;
+    content: "";
+    right:0px; left:0px; top:0px; bottom:0;
+    background-image:url(images/corridor.png);
+    background-repeat: no-repeat;
+    background-position: -300px 100px;
+    opacity: 0.7;
 }
 .header{
     Position:relative;
-    height: 500px;
-    background: url(images/green_head.png) top no-repeat ;
-    background-size: 100% 60%;
+    background: url(images/green_head.png) no-repeat ;
+    background-position: 0px -100px;
+    background-size: 100% 100%;
 }
 .halftone-header{
     position: absolute;
@@ -57,6 +77,37 @@ p{
     color: white;
     background-color: #FB5058;
 }
+.cont-sah-1{
+    position: relative;
+    text-align: center;
+}
+.cont-sah-2{
+    position: relative;
+    text-align: center;
+}
+.back-title-1{
+    display: inline-block;
+    position: relative;
+    margin: auto 0;
+}
+.back-title-1 h2{
+    position: relative;
+    z-index: 1;
+}
+.back-title-1:after{
+    position: absolute;
+    content: "";
+    right:-10px; left:-10px; top:41px; bottom:0;
+    background-color:#FB5058;
+    z-index: 0;
+    transform: rotate(3deg);   
+}
+.blank-space-lg{
+    padding:50px 0px 50px 0px;
+}
+.blank-space-md{
+    padding:25px 0px 25px 0px;
+}
 
 
 
@@ -74,49 +125,84 @@ p{
 
 
 
+/* ----------------------------------------- Large Devices, Wide Screens -------------- */
 
-/* Large Devices, Wide Screens */
 
-@media only screen and (max-width : 1200px) {
+@media only screen and (max-width : 1200px) { /* -------------- < 1200px -------------- */
+    
 .second-title {
     font-size: 112px;
-}}
-@media only screen and (max-width : 992px) {
+}
+.header{
+    background-size: 100% ;
+    background-position: 0px 0px;
+}
+.body-back:before{
+    opacity: 0.2;
+}
+} /* ---------------------------------------------------------------------------------- */
+
+
+@media only screen and (max-width : 992px) { /* ---------------- < 992px -------------- */
+    
 .second-title {
     font-size: 102px;
-}}
+}
+.halftone-header{
+    top:-300px;
+}
+} /* ---------------------------------------------------------------------------------- */
 
-@media only screen and (max-width : 768px) {
+
+@media only screen and (max-width : 768px) { /* ---------------- < 768px -------------- */
+
+p{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 15px;
+}
+h2{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+h3{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+.blank-space{
+    padding:20px 0px 20px 0px;
+}
+.blank-space-md{
+    padding:10px 0px 10px 0px;
+}
 .second-title {
     font-size: 62px;    
 }
 .halftone-header{
-    top:-400px;
-    right:-550px;
+    top:-450px;
 }
 .header_title {
     font-size: 30px;
 }
-.header{
-    background-size: 100% 40%;    
-}
-}
+} /* ---------------------------------------------------------------------------------- */
 
-@media only screen and (max-width : 480px) {
+
+@media only screen and (max-width : 480px) { /* ---------------- < 480px -------------- */
+    
 .second-title {
-    font-size: 37px;        
+    font-size: 35px;        
+}
+.halftone-header{
+    top:-300px;
+    right:-310px;
+    height:400px;
+    width: 400px;
 }
 .header_title {
     font-size: 20px;
 }
-.header{
-    background-size: 100% 41%;    
+.header_title {
+        padding: 30px 0px 0px 0px;
 }
-}
-
-@media only screen and (max-width : 320px) {
-.second-title {
-    font-size: 35px;     
-}}
-
-
+} /* --------------------------------------------------------------------------------- */
