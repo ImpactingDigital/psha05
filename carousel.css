@@ -6,8 +6,13 @@
 .slick-slide img {
     width: 100%;
 }
-.slick-slide p{
+.slick-slide span{
+    display: block;
     text-align: center;
+    padding-top:15px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .slick-slider

@@ -43,8 +43,10 @@ h3{
     right:0px; left:0px; top:0px; bottom:0;
     background-image:url(images/corridor.png);
     background-repeat: no-repeat;
-    background-position: -300px 100px;
-    opacity: 0.7;
+    background-position: -230px 50px;
+    background-size: auto 1300px;
+    background-attachment: fixed;
+    opacity: 0.3;
 }
 .header{
     Position:relative;
@@ -54,17 +56,18 @@ h3{
 }
 .halftone-header{
     position: absolute;
-    height: 700px;
-    width: 700px;
+    height: 500px;
+    width: 500px;
     background: url(images/half.png) center no-repeat ;
     background-size: cover;
-    top:-200px;
-    right:-550px;
+    top:-120px;
+    right:-380px;
     transform: rotate(70deg);
 }
 .header_title {
     font-family: 'Titillium Web', sans-serif;
     position: relative;
+    display: inline-block;
     font-size: 60px;
     font-weight: 600;
     padding: 70px 0px 0px 0px;
@@ -105,10 +108,10 @@ h3{
     transform: rotate(3deg);   
 }
 .blank-space-lg{
-    padding:50px 0px 50px 0px;
+    padding:40px 0px 40px 0px;
 }
 .blank-space-md{
-    padding:25px 0px 25px 0px;
+    padding:20px 0px 20px 0px;
 }
 .sha-cta{
     padding:0px 8px 0px 8px;
@@ -116,23 +119,246 @@ h3{
     font-weight: 700;
     color: #fff;
     transition: 500ms ease;
+    text-decoration: none;
     cursor:pointer;
 }
-.sha-cta:hover{
-    background-color: #2AD03D;
+.sha-cta:hover, .sha-cta:focus{
     color: #333;
     background-color:#FB5058;
+    text-decoration: none;
 }
+.box-prod-1, .box-prod-2{
+    position: relative;
+    max-width: 400px;
+    margin: auto ;
+}
+.box-prod-1 h3, .box-prod-2 h3{
+    color:#fff;
+}
+.box-prod-1{
+    background-image:url(images/back-prod-1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: left;
+    padding:70px 80px 70px 70px;
+    margin-top: 80px; 
+}
+.box-prod-2{
+    background-image:url(images/back-prod-2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: right;
+    padding:70px 35px 70px 0px;
+    margin-top: 80px; 
+}
+.box-prod-1:after{
+    position: absolute;
+    content: " ";
+    right:-40px; bottom:0px;
+    height: 230px;
+    width: 230px;
+    background-image:url(images/cam.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+}
+.box-prod-2:after{
+    position: absolute;
+    content: " ";
+    left:-40px; top:0px;
+    height: 270px;
+    width: 200px;
+    background-image:url(images/band.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+}
+.section-how-to{
+    position: relative;
+    padding:50px 0px 50px 0px;
+    background-position: 100px 100px;
+}
+.section-how-to:before{
+    content:" ";
+    position:absolute;
+    top:130px; bottom:0px; right:0px; left:0px;
+    background-color: #EBEBEB;
+}
+.h2-green{
+    color: #2AD03D;
+    line-height: 0;
+    font-weight: 700;
+}
+.section-how-to span{
+    font-size: 12px;
+}
+.section-form{
+    position: relative;
+    background-color: #fff;
+}
+.form{
+    position: relative;
+    color: #fff;
+    background-image: url(images/back-form.png);
+    background-repeat: no-repeat;
+    background-size: 100% 93%;
+    background-position: bottom;
+}
+.form:before{
+    position: absolute;
+    content: "";
+    top:50px; right:-20px; bottom:0; left:10px;
+    background-image: url(images/half.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(-3deg);
+    opacity: 1;
+}
+.form .band_half{
+    position: absolute;
+    width: 200px;
+    top:200px;
+    left:-100px;
+    bottom: 0;
+    right: 0;
+    -webkit-animation: mover 2.2s infinite  alternate;
+    animation: mover 2.2s infinite  alternate;
+}
+.form .cam_half{
+    position: absolute;
+    width: 210px;
+    top:450px;
+    right:-120px;
+    -webkit-animation: mover 2.5s infinite  alternate;
+    animation: mover 2.5s infinite  alternate;
+}
+.form-title{
+    position: relative;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    margin: auto;
+    padding: 10px 15px 10px 15px;
+    max-width: 320px;
+}
+.form-title p{
+    position: relative;
+}
+.form-title:before{
+    position: absolute;
+    content: "";
+    top:0; right:0; bottom:0; left:0;
+    background-color: #2AD03D;
+    transform: rotate(3deg);
+}
+.form form{
+    display: block;
+    max-width: 460px;
+    margin: auto;
+    padding: 0px 35px 0px 35px;
+}
+.form input{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+    position: relative;
+    color: #fff;
+    width: 100%;
+    margin: 10px 0 10px 0;
+    padding: 10px 10px 10px 10px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid white;
+    border-radius: 0px;
+}
+.form input::placeholder{
+    color: #fff;
+}
+.form form span, .form form a{
+    position: relative;
+    color: #fff;
+    font-size:10px;
+    line-height: 0;
+}
+.form .checkbox{
+    display: inline-block;
+    width: auto;
+    margin: 0;
+}
+.form form button{
+    position: relative;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    background: transparent;
+    outline: 0;
+    border: 2px solid white;
+    border-radius: 0px;
+    transition: 500ms ease;
+}
+.form form button:hover{
+    background: #fff;
+    color: #333;
+}
+.form form button:focus{
+    background: transparent;
+    color: #fff;
+}
+.footer{
+    position: relative;
+    background-color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+.footer:before{
+    position: absolute;
+    content: " ";
+    height: 500px;
+    width: 500px;
+    background: url(images/half.png) no-repeat;
+    background-size: cover;
+    left:-320px;
+    bottom: -200px;
+    transform: rotate(60deg);
+}
+.sha-slogan{
+    position: relative;
+    max-width: 450px;
+    margin: auto;
+    color: #fff;
+    background-color: #2AD03D;
+    padding: 10px;
+    transform: rotate(-3deg);
+}
+.sha-slogan-2{
+    position: relative;
+    max-width: 550px;
+    width: 100%;
+    background-color: #fff;
+    padding: 5px;
+}
+.logo-nav{
+    position:relative;
 
-
-
-
-
-
-
-
-
-
+    z-index: 100;
+}
+.logo-sha, .nav_show{
+    position: fixed;
+    opacity: 0;
+    padding: 6px 70px 15px 30px;
+    background-image: url(images/back-logo.png);
+    background-size: 100% 100%;
+    transition: opacity 300ms;
+}
+.logo-sha{
+    
+}
+.nav_show{
+    opacity: 1;
+    transition: opacity 300ms;
+}
 
 
 
@@ -158,9 +384,7 @@ h3{
     background-size: 100% ;
     background-position: 0px 0px;
 }
-.body-back:before{
-    opacity: 0.2;
-}
+
 } /* ---------------------------------------------------------------------------------- */
 
 
@@ -172,14 +396,43 @@ h3{
 .halftone-header{
     top:-300px;
 }
+.form .band_half{
+    width: 170px;
+    top:200px;
+    left:-10px;
+}
+.form .cam_half{
+    width: 180px;
+    top:450px;
+    right:-20px;
+}
 } /* ---------------------------------------------------------------------------------- */
 
 
 @media only screen and (max-width : 768px) { /* ---------------- < 768px -------------- */
 
+.second-title {
+    font-size: 62px;    
+}
+
+.header_title {
+    font-size: 30px;
+}
+.form .band_half{
+    display:none;
+}
+.form .cam_half{
+    display:none;
+}
+
+} /* ---------------------------------------------------------------------------------- */
+
+
+@media only screen and (max-width : 480px) { /* ---------------- < 480px -------------- */
+
 p{
     font-family: 'Titillium Web', sans-serif;
-    font-size: 15px;
+    font-size: 17px;
 }
 h2{
     font-family: 'Titillium Web', sans-serif;
@@ -189,39 +442,66 @@ h3{
     font-family: 'Titillium Web', sans-serif;
     font-size: 20px;
 }
-.blank-space{
+.blank-space-lg{
     padding:20px 0px 20px 0px;
 }
 .blank-space-md{
     padding:10px 0px 10px 0px;
 }
 .second-title {
-    font-size: 62px;    
-}
-.halftone-header{
-    top:-450px;
-}
-.header_title {
-    font-size: 30px;
-}
-} /* ---------------------------------------------------------------------------------- */
-
-
-@media only screen and (max-width : 480px) { /* ---------------- < 480px -------------- */
-    
-.second-title {
     font-size: 35px;        
 }
 .halftone-header{
-    top:-300px;
-    right:-310px;
-    height:400px;
-    width: 400px;
+    top:-120px;
+    right:-260px;
+    height:300px;
+    width: 300px;
 }
 .header_title {
     font-size: 20px;
 }
 .header_title {
-        padding: 30px 0px 0px 0px;
+    padding: 30px 0px 0px 0px;
+}
+.box-prod-1, .box-prod-2{
+    max-width: 310px;
+}
+.box-prod-1{
+        padding:50px 80px 50px 55px;
+}
+.box-prod-1:after{
+    right:-10px; bottom:0px;
+    height: 175px;
+    width: 175px;
+}
+.box-prod-2:after{
+    height: 220px;
+    width: 200px;
+}
+.section-how-to:before{
+    top:125px;
+}
+.body-back:before{
+    background-size: auto 800px;
+    background-position: -160px 30px;
+}
+.form-title{
+    max-width: 220px;
 }
 } /* --------------------------------------------------------------------------------- */
+
+
+
+
+/* ----------------------------------------- Animations -------------- */
+
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+/* ------------------------------------------------------------------- */
