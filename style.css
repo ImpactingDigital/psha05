@@ -19,6 +19,7 @@ Campanha Shamir® - ADRENALINA
 
 html{
     overflow-x: hidden;
+    overflow-y: scroll;
 }
 p{
     font-family: 'Titillium Web', sans-serif;
@@ -34,8 +35,9 @@ h3{
     font-size: 25px;
     font-weight: 600;
 }
-.body-back{
+body {
     position:relative;
+    overflow: hidden;
 }
 .body-back:before{
     position:absolute;
@@ -203,6 +205,7 @@ h3{
     background-repeat: no-repeat;
     background-size: 100% 93%;
     background-position: bottom;
+    filter: grayscale(100%);
 }
 .form:before{
     position: absolute;
@@ -213,6 +216,7 @@ h3{
     background-repeat: no-repeat;
     transform: rotate(-3deg);
     opacity: 1;
+    filter: grayscale(100%);
 }
 .form .band_half{
     position: absolute;
@@ -223,6 +227,7 @@ h3{
     right: 0;
     -webkit-animation: mover 2.2s infinite  alternate;
     animation: mover 2.2s infinite  alternate;
+    filter: grayscale(100%);
 }
 .form .cam_half{
     position: absolute;
@@ -231,15 +236,18 @@ h3{
     right:-120px;
     -webkit-animation: mover 2.5s infinite  alternate;
     animation: mover 2.5s infinite  alternate;
+    filter: grayscale(100%);
 }
 .form-title{
-    position: relative;
+    position: absolute;
+    right:0; left:0;
     font-weight: 600;
     color: #fff;
     text-align: center;
     margin: auto;
     padding: 10px 15px 10px 15px;
     max-width: 320px;
+    z-index: 1;
 }
 .form-title p{
     position: relative;
@@ -250,6 +258,7 @@ h3{
     top:0; right:0; bottom:0; left:0;
     background-color: #2AD03D;
     transform: rotate(3deg);
+    filter: none;
 }
 .form form{
     display: block;
@@ -351,9 +360,6 @@ h3{
     background-image: url(images/back-logo.png);
     background-size: 100% 100%;
     transition: opacity 300ms;
-}
-.logo-sha{
-    
 }
 .nav_show{
     opacity: 1;
