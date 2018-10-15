@@ -246,7 +246,7 @@ body {
     text-align: center;
     margin: auto;
     padding: 10px 15px 10px 15px;
-    max-width: 320px;
+    max-width: 310px;
     z-index: 1;
 }
 .form-title p{
@@ -321,6 +321,10 @@ body {
     text-align: center;
     overflow: hidden;
 }
+.footer-2{
+    position: relative;
+    text-align: center;
+}
 .footer:before{
     position: absolute;
     content: " ";
@@ -356,14 +360,16 @@ body {
 .logo-sha, .nav_show{
     position: fixed;
     opacity: 0;
+    transform: translate(0,-63px);
     padding: 6px 70px 15px 30px;
     background-image: url(images/back-logo.png);
     background-size: 100% 100%;
-    transition: opacity 300ms;
+    transition: all 300ms ease;
 }
 .nav_show{
     opacity: 1;
-    transition: opacity 300ms;
+    transform: translate(0,0);
+    transition: all 300ms ease;
 }
 
 
@@ -493,7 +499,7 @@ h3{
 }
 .form-title{
     max-width: 220px;
-}
+}   
 } /* --------------------------------------------------------------------------------- */
 
 

@@ -2,9 +2,18 @@
     <html>
         
         <head>
-            <meta charset="UTF-8">
-            
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta property="og:locale" content="pt_PT">
+            <meta property="og:url" content="https://">
+            <meta property="og:title" content="Campanha Shamir® - ADRENALINA">
+            <meta property="og:site_name" content="Shamir®">
+            <meta property="og:description" content="...">
+            <meta property="og:image" content="https://campanhas.jpeg">
+            <meta property="og:image:type" content="image/jpeg">
+            <meta property="og:image:width" content="800">
+            <meta property="og:image:height" content="600">
+            <meta property="og:type" content="website">
             
             <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
@@ -58,13 +67,20 @@
                 });
             });
             </script>
+            <!-- Global site tag (gtag.js) - Google Analytics 
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41241495-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'UA-41241495-1');</script> -->
 
-            
             <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
             <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700,900|Titillium+Web:400,600,700,900" rel="stylesheet">
             <link rel="stylesheet" href="style.css">
             <link rel="stylesheet" href="carousel.css">
-
+            <link rel="icon" href="images/favicon.png">
+            
             <title>Campanha Shamir® - ADRENALINA</title>
         </head>
         
@@ -178,10 +194,10 @@
                     <div class="row">
                         <div class="col-md-offset-2 col-md-8">
                             <div class="form-title">
-                                <p>Queres ter acesso<br>privilegiado a campanhas<br>semelhantes no futuro?</p>
+                                <p>Queres receber um brinde extra e ter acesso a campanhas semelhantes no futuro?</p>
                                 <p>Deixa-nos o teu contacto:</p>
                             </div>
-                            <div class="form">
+                            <div id="formulario" class="form">
                                 <img class="band_half" src="images/band_half.png"/>
                                 <img class="cam_half" src="images/cam-half.png"/>
                                 <p>&nbsp;</p>
@@ -189,16 +205,19 @@
                                 <p>&nbsp;</p>
                                 <p>&nbsp;</p>
                                 <p>&nbsp;</p>
-                                <form>
+                                <form data-smk-form action="https://shamir.smark.io/api.php/directlead/3ed106997f24ba383032e81bd1cdd9b1bee968f9" method="post">
+                                    <input type="hidden" name="redirect_ok" value="http://docs.impacting.digital/sha05/obrigado-pelo-seu-contacto.html">
+                                    <input type="hidden" name="redirect_error" value="http://docs.impacting.digital/sha05/ocorreu-um-erro.html">
+                                    <input type="hidden" name="flag[smk_create_new]" value="0">
                                     <input placeholder="Nome*" type="text" name="lead[first_name]" required>
                                     <input placeholder="Email*" type="email" name="lead[email]" required>
-                                    <input placeholder="Telemóvel" type="text" name="lead[phone]">
+                                    <input placeholder="Telemóvel" type="tel" name="lead[phone]">
                                     <span>*campo obrigatório</span>
                                     <p>&nbsp;</p>
                                     <input class="checkbox" type="checkbox" name="opt" required>&nbsp;&nbsp;<span>Autorizo o tratamento dos meus dados pessoais acima identificados, pela SHAMIR OPTICAL, LDA. e empresas parceiras, no âmbito das suas atividades, tendo em vista as finalidades de Marketing, comunicação e campanhas. Mais declaro que, fui informado(a) que me é garantido, enquanto titular dos dados pessoais, o direito de acesso, retificação,  portabilidade, limitação, oposição e eliminação dos meus dados pessoais tratados no âmbito da presente base de dados, devendo para o efeito, contatar marketing@shamir.pt. Fui informado da existência do direito de retirar consentimento em qualquer altura, sem comprometer a licitude do tratamento efetuado com base no consentimento previamente dado, bem como do direito de apresentar reclamação a uma autoridade de controlo e ainda que a comunicação dos meus dados pessoais é facultativa.</span><p>&nbsp;</p>
                                     <a href="https://www.shamir.com/privacy-Notice." target="_blank">Termos e Condições do Registo.</a>
                                     <p>&nbsp;</p>
-                                    <button class="button" type="submit">Enviar</button>
+                                    <button class="button" type="submit" value="Go">Enviar</button>
                                 </form>
                                 <p>&nbsp;</p>
                                 <p>&nbsp;</p>
